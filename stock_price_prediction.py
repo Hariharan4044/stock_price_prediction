@@ -8,7 +8,6 @@ from sklearn.metrics import mean_squared_error
 import tkinter as tk
 from tkinter import filedialog
 
-# Step 1: Upload and Read the User File
 def upload_file():
     root = tk.Tk()
     root.withdraw()
@@ -20,19 +19,17 @@ def upload_file():
         print("No file selected. Exiting.")
         exit()
 
-# Step 2: Load User Data
 data = upload_file()
 
-# Display the first few rows of the file to understand its structure
 print("\nFirst few rows of the uploaded data:")
 print(data.head())
 
-# Ensure the Date column is present
+
 if 'Date' not in data.columns:
     print("Error: The uploaded file must contain a 'Date' column.")
     exit()
 
-# Convert Date column to datetime format
+
 data['Date'] = pd.to_datetime(data['Date'])
 data = data.sort_values(by='Date')
 
