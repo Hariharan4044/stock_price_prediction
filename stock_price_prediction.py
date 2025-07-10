@@ -76,7 +76,7 @@ print(f"\nMean Squared Error (MSE): {mse}")
 print(f"Root Mean Squared Error (RMSE): {rmse}")
 
 plt.figure(figsize=(10, 6))
-plt.plot(y_test.index, y_test, label='Actual Prices', color='blue')
+plt.plot(y_test.index, y_test, label='Actual Pricess', color='blue')
 plt.plot(y_test.index, y_pred, label='Predicted Prices', linestyle='dashed', color='orange')
 plt.legend()
 plt.title('Stock Price Prediction: Actual vs Predicted')
